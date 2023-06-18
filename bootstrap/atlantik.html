@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+
+    <script src="atlantik.js"></script>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /*benim*/
+        .container-fluid {
+            margin-top: 80px;
+            background-color: #2D2625;
+            position: fixed;
+            z-index: 600;
+        }
+
+        .navbar-brand {
+            color: #E6DA1B;
+            font-size: 50px;
+            font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+        }
+
+        #home-page {
+            color: #ECE246;
+        }
+
+        .nav-link {
+            color: #ECE246;
+        }
+
+        .nav-link:hover {
+            color: #FFF000;
+        }
+
+        #btn-search {
+            background-color: #2D2625;
+            color: #ECE246;
+            border-color: #ECE246;
+        }
+
+        #btn-search:hover {
+            background-color: #ECE246;
+            color: #2D2625;
+        }
+
+        .dropdown-menu {
+            background: #2D2625;
+            border-color: #E6DA1B;
+        }
+
+        .dropdown-item {
+            color: #ECE246;
+        }
+
+        .dropdown-item:hover {
+            background-color: #ECE246;
+            color: #2D2625;
+        }
+
+        #carouselExampleCaptions {
+            width: 100%;
+            margin-top: 80px;
+            padding: 10px;
+
+        }
+
+        .carousel-inner {
+            width: 100%;
+            height: 500px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 500px;
+        }
+
+        /*kopya*/
+
+        #portfolio {
+            height: 1200px;
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+            text-align: center;
+            background-color: aliceblu;
+        }
+
+        #portfolio h2 {
+            font-size: 4rem;
+            color: #E6DA1B;
+        }
+
+        hr.cizgi {
+            border: none;
+            border-top: 0.4rem solid #E6DA1B;
+            border-radius: 10px;
+            max-width: 45rem;
+            margin: 2.5rem auto;
+            overflow: visible;
+            height: 0;
+        }
+
+        .cizgi::after {
+            content: "\269C";
+            color: #E6DA1B;
+            font-weight: 900;
+            font-size: 4.5rem;
+            position: relative;
+            top: -40px;
+            padding: 0 10px;
+            background-color: aliceblue;
+        }
+
+        #imageahmet h3 {
+            padding: 3rem;
+            float: none;
+            font-size: 2.5rem;
+            color: #E6DA1B;
+        }
+
+        #imageahmet p {
+            text-align: left;
+        }
+
+        #imageahmet p::first-letter {
+            margin: 5px;
+            font-size: 4.5rem;
+            color: #E6DA1B;
+        }
+
+        hr.ikincicizgi {
+            text-align: center;
+            border: none;
+            border-top: 0.4rem solid #E6DA1B;
+            border-radius: 10px;
+            max-width: 45rem;
+            margin: 2.5rem auto;
+            overflow: visible;
+            height: 0;
+        }
+
+        .ikincicizgi::after {
+            content: "\269C";
+            color: #E6DA1B;
+            font-weight: 900;
+            font-size: 4.5rem;
+            position: relative;
+            top: -40px;
+            padding: 0 10px;
+            background-color: white;
+        }
+
+        #suscribe {
+            background-color: #2D2625;
+            color: #ECE246;
+            border-color: #ECE246;
+        }
+
+        #suscribe:hover {
+            background-color: #ECE246;
+            color: #2D2625;
+        }
+
+        #socialm {
+            float: right;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Atlantik Gümrükleme</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul id="myList" class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-page" aria-current="page" href="#">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Hizmetler
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="demiryolu.html">Demiryolu Taşımacılığı</a></li>
+                            <li><a class="dropdown-item" href="karayolu.html">Karayolu Taşımacılığı</a></li>
+                            <li>
+                                <hr class="dropdown-divider" style="border-color:  #E6DA1B">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Diğer Hizmetlerimiz</a></li>
+                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-2">İletişim</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input id="inputBtn" class="form-control me-2" type="search" placeholder="Ara..." aria-label="Search">
+                    <button class="btn btn-outline-success" id="btn-search" type="submit" onclick="searchFunction()">Ara</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="tren-lojistik.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Demiryolu ile Gümrükleme</h5>
+                    <p>Demiryollarıyla dünyanın yarısından fazlasına taşımacılık hizmeti sunuyoruz.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="karayolu-lojistik.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Karayolu ile Lojistik</h5>
+                    <p>Tırlarımız ile hiç ulaşılamayan mesafelere yol katediyoruz.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="lojistik.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Atlantik Gümrükleme</h5>
+                    <p>Atlantik Gümrükleme ile güven içerinde bir ulaşım.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <section id="portfolio">
+        <div id="hakkimizda" class="about">
+            <h2>HAKKIMIZDA</h2>
+            <hr class="cizgi">
+            <br>
+
+            <div id="imageahmet">
+
+                <h3>Atlantik Gümrükleme Kurucuları Kimdir ?</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde eveniet voluptatum quibusdam dolore qui similique distinctio at impedit nesciunt dolorem sit, optio, laboriosam reiciendis perferendis tenetur atque esse, mollitia, animi. Dignissimos fugit fuga minus, numquam laborum quidem laudantium rem aliquid aliquam, accusantium corrupti perferendis voluptatem vel expedita libero asperiores, similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio laborum, ea quis consequatur, impedit quam magnam amet a quidem fugit commodi error repellendus veniam! Porro nemo, pariatur architecto iure odit aliquam nostrum quos voluptatum? Alias quam velit sunt, praesentium earum voluptatibus libero necessitatibus, fugit nostrum iste dignissimos porro quisquam molestiae architecto harum quas error maiores? Vero vitae rerum quaerat iste, eveniet eum voluptate, deleniti alias temporibus architecto asperiores repudiandae odit a quam tempora, suscipit soluta, praesentium laudantium voluptates. Temporibus numquam non consectetur et libero quaerat id corporis dolore, rem aliquam vero tempora praesentium eius expedita laudantium sint sapiente enim quos dicta. Explicabo rerum fugit aliquam, quo in beatae optio dignissimos nihil error maxime amet dolores laboriosam excepturi, reprehenderit sunt perferendis magnam. Vel, sapiente vitae, doloribus voluptatem facilis aliquam vero. Dolore repudiandae, reiciendis aliquid voluptatibus odit, ab, sapiente fuga rerum voluptates voluptate magnam ipsa amet. Magnam incidunt accusamus officiis quas mollitia.</p>
+
+                <h3>Atlantik Gümrükleme Hakkında</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil illo deleniti odit veniam ut id odio quod omnis tempore corporis sed error asperiores consectetur at et nesciunt quasi recusandae adipisci provident, eligendi commodi voluptate ducimus atque libero. Soluta vitae est, voluptate hic quasi modi temporibus, architecto eligendi atque a, aperiam. Doloribus, inventore facere, dicta cumque eaque minus nulla vitae aliquam accusantium sunt porro voluptatum perferendis error sit molestias itaque voluptates sint est qui sequi! Tempora, iure ab facilis consequatur pariatur explicabo possimus praesentium ratione! Provident minima amet sit eligendi in nam eius commodi sunt dicta a dolore, quod ducimus illo officia, obcaecati quia quaerat quisquam, voluptate eum suscipit odit! Obcaecati facilis dolor voluptatum inventore deleniti quibusdam ratione corrupti neque maxime, aliquam laboriosam unde doloremque! Quam molestiae expedita perspiciatis dignissimos doloremque asperiores enim magnam tenetur delectus, odit voluptate error deleniti tempore mollitia ipsam? Totam in quibusdam dignissimos modi quisquam repellendus voluptate! Nisi distinctio ex veritatis obcaecati, quisquam fugiat dignissimos, doloremque qui ut amet voluptate saepe? Molestias sint facilis voluptate dolore ratione nam nihil inventore optio natus quia itaque sapiente maiores, a iure, illum iusto, cum nobis veniam enim tempora. Asperiores hic dicta nihil nisi, vero, laboriosam doloremque pariatur illo reprehenderit alias.</p>
+
+
+            </div>
+
+        </div>
+    </section>
+    <br><br><br>
+    <hr class="ikincicizgi">
+    <br>
+
+    <div class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5 id="contact-2">İletişim</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Atlantik Mah. Atlantik Sok.No.30 Küçükçekmece / İstanbul</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Telefon : 0544 444 44 44</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">E-mail : atlantik@lojistik.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Hızlı Erişim</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Anasayfa</a></li>
+                        <li class="nav-item mb-2"><a href="#portfolio" class="nav-link p-0 text-muted">Hakkımızda</a></li>
+                        <li class="nav-item mb-2"><a href="demiryolu.html" class="nav-link p-0 text-muted">Demiryolu Taşımacılığı</a></li>
+                        <li class="nav-item mb-2"><a href="karayolu.html" class="nav-link p-0 text-muted">Karayolu Taşımacılığı</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Diğer Hizmetlerimiz</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5></h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Tekliflerimiz için size ulaşalım.</h5>
+                        <p>Sizlerle iletişime geçip fırsatlarımızı ve hizmetlerimizi sunalım.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Mail Adresiniz</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Mail Adresiniz">
+                            <button id="suscribe" class="btn btn-primary" type="button">Gönder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p style="font-size:30px; font-family: cursive; color:#E6DA1B; ">Atlantik Gümrükleme</p>
+                <div id="socialm">
+                    <a href="https://www.instagram.com/boksfederasyonu/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1000px-Instagram_logo_2022.svg.png" width="50px"></a>
+                    <a href="https://www.facebook.com/TrBoksFederasyonu/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/2048px-Facebook_icon.svg.png" width="50px">
+                    </a>
+                    <a href="https://twitter.com/boksfederasyonu?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+                        <img src="https://store-images.s-microsoft.com/image/apps.45406.9007199266244427.4d45042b-d7a5-4a83-be66-97779553b24d.2a88a418-b96d-44a6-ad4f-5e0ee6289b2c" width="50px">
+                    </a>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+
+    
+</body>
+
+</html>
